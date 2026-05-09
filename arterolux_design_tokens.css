@@ -1,0 +1,359 @@
+/**
+ * ============================================================
+ * ARTEROLUX — CSS Design Tokens
+ * by Mathieu Lustrerie
+ * Version 1.0
+ * ============================================================
+ */
+
+:root {
+
+  /* ----------------------------------------------------------
+     BACKGROUNDS
+     ---------------------------------------------------------- */
+  --ax-noir:       #060606;   /* Primary dark — Instagram, packshots, digital */
+  --ax-ombre:      #100E0B;   /* Warm shadow — atmospheric variation */
+  --ax-creme:      #F5F1EB;   /* Cream — press, print documents */
+  --ax-ivoire:     #EBE7E0;   /* Ivory — secondary print background */
+
+  /* ----------------------------------------------------------
+     FLAME ACCENT — ★ Signature Color
+     ---------------------------------------------------------- */
+  --ax-flamme:     #C29A32;   /* PRIMARY ACCENT — titles (H2), underlines, icons */
+  --ax-halo:       #EAC262;   /* Gold highlight — luminous accents, hovers */
+  --ax-braise:     #7A5E1C;   /* Deep amber — shadows, pressed states */
+
+  /* ----------------------------------------------------------
+     TEXT & NEUTRALS
+     ---------------------------------------------------------- */
+  --ax-blanc:      #F0EDE8;   /* Warm white — H1/H3 on dark */
+  --ax-perle:      #C8C4BC;   /* Pearl — body text on dark */
+  --ax-cendres:    #7A7670;   /* Ash — captions, labels, tertiary */
+  --ax-anthracite: #2A2724;   /* Anthracite — all text on light/cream */
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY — Font Stacks
+     ---------------------------------------------------------- */
+  --ax-font-serif: 'Garamond', 'EB Garamond', Georgia, serif;
+  --ax-font-sans:  'Optima', 'Candara', 'Century Gothic', sans-serif;
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY — Letter Spacing
+     ---------------------------------------------------------- */
+  --ax-ls-display:  0.18em;  /* Display / Hero titles */
+  --ax-ls-h1:       0.12em;  /* H1 */
+  --ax-ls-h2:       0.10em;  /* H2 */
+  --ax-ls-h3:       0.04em;  /* H3 */
+  --ax-ls-logo:     0.06em;  /* ARTEROLUX logotype */
+  --ax-ls-tagline:  0.22em;  /* BY MATHIEU LUSTRERIE */
+  --ax-ls-label:    0.18em;  /* Labels / Overlines */
+  --ax-ls-tag:      0.14em;  /* Pills / Tags */
+  --ax-ls-body:     0.01em;  /* Body text */
+  --ax-ls-caption:  0.02em;  /* Captions */
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY — Line Heights
+     ---------------------------------------------------------- */
+  --ax-lh-display:    1.0;
+  --ax-lh-heading:    1.1;
+  --ax-lh-subheading: 1.3;
+  --ax-lh-quote:      1.55;
+  --ax-lh-body:       1.8;
+  --ax-lh-caption:    1.6;
+  --ax-lh-label:      1.4;
+
+  /* ----------------------------------------------------------
+     LOGO CONSTRUCTION
+     ---------------------------------------------------------- */
+  --ax-logo-ls:        0.06em;  /* ARTEROLUX letter-spacing */
+  --ax-tagline-ls:     0.22em;  /* BY MATHIEU LUSTRERIE letter-spacing */
+  --ax-tagline-ratio:  0.38;    /* tagline font-size = 38% of ARTEROLUX */
+  --ax-logo-gap:       0.30em;  /* gap between ARTEROLUX and tagline */
+
+  /* Logo colors — dark background */
+  --ax-logo-dark-primary:  #C29A32;          /* ARTEROLUX on dark */
+  --ax-logo-dark-tagline:  rgba(240,237,232,0.65); /* BY MATHIEU LUSTRERIE on dark */
+
+  /* Logo colors — light/cream background */
+  --ax-logo-light-primary: #2A2724;          /* ARTEROLUX on cream */
+  --ax-logo-light-tagline: #C29A32;          /* BY MATHIEU LUSTRERIE on cream */
+
+  /* ----------------------------------------------------------
+     BORDERS & ACCENTS
+     ---------------------------------------------------------- */
+  --ax-border-accent: 0.5px solid rgba(194, 154, 50, 0.25);
+  --ax-border-light:  0.5px solid rgba(255, 255, 255, 0.07);
+  --ax-border-dark:   0.5px solid rgba(0, 0, 0, 0.08);
+  --ax-rule-flame:       2px solid #C29A32;   /* Section header underline */
+  --ax-rule-flame-thin:  0.5px solid #C29A32; /* Footer separator */
+  --ax-rule-quote:       3px solid #C29A32;   /* Pull quote border-left */
+
+  /* ----------------------------------------------------------
+     CANVAS FORMATS
+     ---------------------------------------------------------- */
+
+  /* Instagram Square 1:1 */
+  --ax-ig-size:    1080px;
+  --ax-ig-margin:  54px;       /* 5% of canvas */
+
+  /* Instagram Story / Reels 9:16 */
+  --ax-story-w:           1080px;
+  --ax-story-h:           1920px;
+  --ax-story-margin-side: 72px;
+  --ax-story-safe-top:    200px; /* UI zone — no content above */
+  --ax-story-safe-bottom: 260px; /* Swipe zone — no content below */
+
+  /* PPTX 16:9 */
+  --ax-pptx-w:      1920px;
+  --ax-pptx-h:      1080px;
+  --ax-pptx-margin: 80px;
+  --ax-pptx-cols:   3;
+  --ax-pptx-gutter: 40px;      /* (1920 - 160 - 2*40) / 3 = 560px/col */
+  --ax-pptx-footer-y: 960px;   /* Footer separator line y-position */
+
+  /* Web ML — mathieulustrerie.com */
+  --ax-web-viewport:   1440px;
+  --ax-web-container:  1200px;  /* max-width, centered */
+  --ax-web-margin:     120px;   /* auto margin each side */
+  --ax-web-cols:       12;
+  --ax-web-gutter:     24px;
+  --ax-web-col-width:  78px;    /* (1200 - 11*24) / 12 */
+  --ax-web-article:    792px;   /* 8 columns centered */
+  --ax-web-bg:         #060606; /* Always black — no exceptions */
+  --ax-web-mobile:     375px;
+  --ax-web-mobile-margin: 16px;
+
+  /* Press / Dossier A4 (96dpi screen) */
+  --ax-a4-w:       794px;
+  --ax-a4-h:       1123px;
+  --ax-a4-margin:  76px;        /* 20mm equivalent at 96dpi */
+  --ax-a4-content: 642px;       /* 794 - 2*76 */
+  --ax-a4-cols:    2;
+  --ax-a4-gutter:  20px;
+  --ax-a4-col-width: 311px;     /* (642 - 20) / 2 */
+  --ax-a4-header-height: 144px; /* Logo + title zone */
+  --ax-a4-accent-y: 220px;      /* Flame rule position */
+  --ax-a4-bg: #F5F1EB;
+
+  /* ----------------------------------------------------------
+     COMPONENT — Argument Card
+     ---------------------------------------------------------- */
+  --ax-card-bg:           #0E0C0A;
+  --ax-card-border:       0.5px solid rgba(255, 255, 255, 0.07);
+  --ax-card-radius:       8px;
+  --ax-card-padding:      18px;
+  --ax-card-num-size:     44px;  /* Ghost number */
+  --ax-card-num-opacity:  0.20;  /* Ghost number opacity */
+
+}
+
+/* ============================================================
+   COMPONENT CLASSES
+   ============================================================ */
+
+/* --- Logo --- */
+.ax-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ax-logo__name {
+  font-family: var(--ax-font-serif);
+  font-weight: 400;
+  letter-spacing: var(--ax-logo-ls);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.ax-logo__tagline {
+  font-family: var(--ax-font-sans);
+  font-weight: 400;
+  letter-spacing: var(--ax-tagline-ls);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: var(--ax-logo-gap);
+}
+/* Dark background version */
+.ax-logo--dark .ax-logo__name    { color: var(--ax-logo-dark-primary); }
+.ax-logo--dark .ax-logo__tagline { color: var(--ax-logo-dark-tagline); }
+/* Light background version */
+.ax-logo--light .ax-logo__name    { color: var(--ax-logo-light-primary); }
+.ax-logo--light .ax-logo__tagline { color: var(--ax-logo-light-tagline); }
+
+/* --- Section Header --- */
+.ax-section-header { margin-bottom: 24px; }
+.ax-section-header__overline {
+  font-family: var(--ax-font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ax-ls-label);
+  color: var(--ax-flamme);
+  margin: 0 0 8px;
+  display: block;
+}
+.ax-section-header__title {
+  font-family: var(--ax-font-serif);
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--ax-ls-h2);
+  line-height: var(--ax-lh-heading);
+  margin: 0 0 12px;
+}
+.ax-section-header__rule {
+  width: 36px;
+  height: 2px;
+  background: var(--ax-flamme);
+  border-radius: 1px;
+  border: none;
+}
+
+/* --- Pull Quote --- */
+.ax-pull-quote {
+  border-left: var(--ax-rule-quote);
+  padding: 20px 24px;
+  margin: 0;
+}
+.ax-pull-quote__text {
+  font-family: var(--ax-font-serif);
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: var(--ax-ls-body);
+  color: var(--ax-blanc);
+  line-height: var(--ax-lh-quote);
+  margin: 0 0 14px;
+}
+.ax-pull-quote__attribution {
+  font-family: var(--ax-font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ax-flamme);
+  margin: 0;
+}
+
+/* --- CTA Buttons --- */
+.ax-cta {
+  font-family: var(--ax-font-serif);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.ax-cta--filled {
+  background: var(--ax-flamme);
+  color: var(--ax-noir);
+  border: none;
+}
+.ax-cta--outline {
+  background: transparent;
+  color: var(--ax-flamme);
+  border: 1px solid var(--ax-flamme);
+}
+
+/* --- Tags / Pills --- */
+.ax-tag {
+  font-family: var(--ax-font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ax-ls-tag);
+  padding: 2px 8px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.ax-tag--amber {
+  color: var(--ax-flamme);
+  background: rgba(194, 154, 50, 0.08);
+  border: 0.5px solid rgba(194, 154, 50, 0.35);
+}
+.ax-tag--filled {
+  background: var(--ax-flamme);
+  color: var(--ax-blanc);
+}
+.ax-tag--neutral {
+  color: var(--ax-cendres);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Argument Card --- */
+.ax-arg-card {
+  background: var(--ax-card-bg);
+  border-radius: var(--ax-card-radius);
+  border: var(--ax-card-border);
+  padding: var(--ax-card-padding);
+  position: relative;
+  overflow: hidden;
+}
+.ax-arg-card__number {
+  font-family: var(--ax-font-serif);
+  font-size: var(--ax-card-num-size);
+  font-weight: 400;
+  color: var(--ax-flamme);
+  opacity: var(--ax-card-num-opacity);
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  line-height: 1;
+}
+.ax-arg-card__overline {
+  font-family: var(--ax-font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ax-flamme);
+  margin: 0 0 8px;
+}
+.ax-arg-card__title {
+  font-family: var(--ax-font-serif);
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ax-blanc);
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+.ax-arg-card__body {
+  font-family: var(--ax-font-sans);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ax-perle);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --- Document Footer --- */
+.ax-footer {
+  border-top: var(--ax-rule-flame-thin);
+  padding: 11px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--ax-font-sans);
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ax-cendres);
+}
+
+/* ============================================================
+   UTILITY — Section rule shorthand
+   ============================================================ */
+.ax-rule {
+  width: 36px;
+  height: 2px;
+  background: var(--ax-flamme);
+  border-radius: 1px;
+  border: none;
+  margin: 12px 0 0;
+}
